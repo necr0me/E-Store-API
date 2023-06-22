@@ -2,6 +2,7 @@ require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
+require "sprockets/railtie"
 require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"
@@ -35,5 +36,8 @@ module EStoreApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
   end
 end
