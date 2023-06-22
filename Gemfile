@@ -12,6 +12,25 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+gem "rubocop-rails"
+
+gem "auto_strip_attributes"
+
+gem "graphql"
+
+gem "trailblazer-rails"
+
+gem "dry-types"
+
+gem "dry-validation"
+
+gem "jwt"
+
+gem "pundit"
+
+gem "devise"
+
+gem "rails-i18n"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -34,15 +53,38 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
+gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  gem "rspec-rails"
+
+  gem "faker"
+
+  gem "factory_bot_rails"
+
+  gem "pundit-matchers"
+
+  gem "shoulda-matchers"
+
+  gem "rubocop-rspec"
+
+  gem "rubocop-performance"
+
+  gem "simplecov", require: false
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "coffee-rails"
+
+  gem "graphiql-rails"
+
+  gem "sass-rails"
+
+  gem "uglifier"
 end
 
